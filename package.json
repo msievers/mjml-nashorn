@@ -1,0 +1,21 @@
+{
+  "name": "mjml-nashorn",
+  "version": "3.3.5.0",
+  "description": "Browserified version of mjml tweaked to run in the java nashorn javascript engine",
+  "main": "dist/mjml.js",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "browserify": "^14.5.0",
+    "mjml": "^3.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm install && ./node_modules/.bin/browserify node_modules/babel-polyfill/dist/polyfill.js node_modules/mjml-core/lib/index.js -s 'mjml' -r 'cheerio' -r 'mjml' > dist/mjml.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/msievers/mjml-nashorn"
+  },
+  "author": "Michael Sievers",
+  "license": "MIT"
+}
